@@ -1,10 +1,13 @@
 public class Notebook {
     String weight;
     int price;
+    int year;
 
-    public Notebook(String weight, int price) {
+
+    public Notebook(String weight, int price, int year) {
         this.weight = weight;
         this.price = price;
+        this.year = year;
     }
 
     public void checkPrice() {
@@ -21,6 +24,9 @@ public class Notebook {
     }
 
     public void checkWeight() {
+
+        int weight = Integer.parseInt("5");
+
         if (this.weight < 1000) {
             System.out.println("This notebook is light.");
 

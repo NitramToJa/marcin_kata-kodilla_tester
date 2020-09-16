@@ -16,12 +16,14 @@ public class Grades {
     }
 
     private static String lastGrade(){
-
+        System.out.println("Ostatnia dodana ocena: " + grades[])
     }
 
     private static Integer gradesSum(){
-        this.sum = 0
-        for (int i = 0; i < 10; i++ ){
-            int sum = sum + grades[i];
-    }
+        int sum =0;
+        for (int i = 0; i < size; i++ ){
+            int sum = grades[i] + sum;
+            }
+        double avg = (double) sum / size;
+        System.out.println("Srednia z tablicy: " + avg);
 }

@@ -15,8 +15,8 @@ public class MainExtended {
         System.out.println(carClass);
         System.out.print("He have a child - ");
         System.out.println(haveAChild);
-        System.out.print("Its name is ");
-        System.out.println(childName);
+        System.out.print("Its name is " + childName);
+
 
     }
 }

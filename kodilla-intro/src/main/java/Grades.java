@@ -1,4 +1,4 @@
-public class Grades {
+/*public class Grades {
     private int[] grades;
     private int size;
 
@@ -27,3 +27,5 @@ public class Grades {
         double avg = (double) sum / size;
         System.out.println("Srednia z tablicy: " + avg);
 }
+
+ */

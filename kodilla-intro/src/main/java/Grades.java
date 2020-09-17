@@ -20,9 +20,9 @@ public class Grades {
         return this.grades[this.size -1];
     }
 
-    public int gradesAverage() {
+    public double gradesAverage() {
         int sum = 0;
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < this.size; i++) {
             sum += this.grades[i];
         }
         return sum / this.size;

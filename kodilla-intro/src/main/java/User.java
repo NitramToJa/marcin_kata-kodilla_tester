@@ -1,9 +1,18 @@
 public class User {
+    String name;
+    int age;
 
-
+    public User (String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+    public String getName() {
+        return name;
+    }
+    public int getAge() {
+        return age;
+    }
     public static void main(String[] args) {
-        String userName;
-        int userAge;
 
         User anna = new User("Anna", 20);
         User betty = new User("Betty", 33);
@@ -13,23 +22,20 @@ public class User {
         User frankie = new User("Frankie", 45);
 
         User[] users = {anna, betty, carl, david, eva, frankie};
-    }
 
-    public double ageAverage() {
-        int result = 0;
-        for (int i = 0; i < users.size; i++) {
-            result += users[i]; usersAge;
+        int sum = 0;
+        for(int i = 0; i < users.length; i++) {
+            sum += users[i].age;
         }
-        return result / users.size;
+        int ageAverage = sum / users.length;
 
-    }
-
-    public void youngerThenAverage() {
-        for (int i = 0; i < users.size; i++) {
-            if (users[i],userAge<ageAverage ){
-                System.out.println(users[i]);
-                else
+        for(int i =0; i < users.length; i++) {
+            if(users[i].getAge() < ageAverage) {
+                System.out.println("User named: " + users[i].getName() + "is below age average");
             }
+
         }
+
     }
+
 }

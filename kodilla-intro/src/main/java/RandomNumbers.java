@@ -1,53 +1,28 @@
 import java.util.Random;
 
 public class RandomNumbers {
-    private int[] randomNumbers;
-    private int min;
-    private int max;
 
-    public RandomNumbers() {
-        this.randomNumbers = new int[5000];
+    public static int getRandom(int rangeMin, int rangeMax) {
+        Random r = new Random();
+        int randomNumber = r.nextInt((rangeMax - rangeMin) + 1);
+        return randomNumber;
     }
 
-    public void randomizeNumbers() {
-        int low = 0;
-        int high = 30;
+
+    public static void main(String[] args) {
         int sum = 0;
+        int highValue = 0;
+        int lowValue = 30;
         while (sum <= 5000) {
-            for (int i = 0; i < 5000; i++) {
-                Random r = new Random();
-                randomNumbers[i] = r.nextInt((high - low) + 1);
-                sum = sum + randomNumbers[i];
-            }
+            int zmien = getRandom(0, 30);
+            sum = sum + zmien;
+            if (highValue < zmien) highValue = zmien;
+            if (lowValue > zmien) lowValue = zmien;
         }
-    }
-        public int minValue () {
-        min = randomNumbers[0];
-        for (int i=0; i < randomNumbers.length; i++) {
-            if (randomNumbers[i] < min) {
-                min = randomNumbers[i];
-            }
-        }
-        return min;
-    }
 
-    public int maxValue () {
-        max = randomNumbers[0];
-        for (int i=0; i < randomNumbers.length; i++) {
-            if (randomNumbers[i] > max) {
-                max = randomNumbers[i];
-            }
-        }
-        return max;
-    }
+        System.out.println("Minimal randomize number is: " + lowValue);
+        System.out.println("Maximal randomize number is: " + highValue);
 
-    public static void main (String[] args) {
-        RandomNumbers numberTable = new RandomNumbers();
-        numberTable.randomizeNumbers();
-        System.out.println("Minimal randomize number is: " + numberTable.minValue());
-        System.out.println("Maximal randomize number is: " + numberTable.maxValue());
     }
 
 }
-
-

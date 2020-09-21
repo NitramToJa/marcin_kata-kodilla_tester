@@ -14,10 +14,10 @@ public class RandomNumbers {
         int highValue = 0;
         int lowValue = 30;
         while (sum <= 5000) {
-            int zmien = getRandom(0, 30);
-            sum = sum + zmien;
-            if (highValue < zmien) highValue = zmien;
-            if (lowValue > zmien) lowValue = zmien;
+            int randomNr = getRandom(0, 30);
+            sum = sum + randomNr;
+            if (highValue < randomNr) highValue = randomNr;
+            if (lowValue > randomNr) lowValue = randomNr;
         }
 
         System.out.println("Minimal randomize number is: " + lowValue);

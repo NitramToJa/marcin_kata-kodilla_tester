@@ -21,8 +21,8 @@ public class ColorNames {
         }
     }
     public static void main(String[] args) {
-        ColorNames.enterFirstLetter();
-        System.out.println("Picked color:" + enterFirstLetter());
+        final String letter = enterFirstLetter();
+        System.out.println("You picked color: " + letter);
 
     }
 

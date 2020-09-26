@@ -7,14 +7,18 @@ public class Car {
     public Car(int wheels, int seats) {
         this.wheels = wheels;
         this.seats = seats;
-        }
+    }
 
     public void turnOnLights() {
-        System.out.println("Lights were turned on");
+        System.out.println("lights were turned on");
     }
 
     public void openDoors() {
         System.out.println("Opening 4 doors");
+    }
+
+    public void displayNumberOfSeats() {
+        System.out.println("Number of seats: " + seats);
     }
 
     public int getWheels() {
@@ -24,10 +28,4 @@ public class Car {
     public int getSeats() {
         return seats;
     }
-
-    public void displayNumberOfSeats() {
-        System.out.println("Number of seats: " + seats);
-    }
-
-
 }

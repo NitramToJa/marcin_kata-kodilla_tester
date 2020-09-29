@@ -5,10 +5,12 @@ public class Windows extends OperatingSystem {
         super(realiseYear);
     }
 
+    @Override
     public void turnOn() {
         System.out.println("Windows turned on");
     }
 
+    @Override
     public void turnOff() {
         System.out.println("Windows turned off");
     }
